@@ -4,6 +4,7 @@ import { Home } from './Home';
 import { Profile } from './Profile';
 import { Nav } from './Nav';
 import Auth from './Auth';
+import { CallBack } from './CallBack';
 
 const auth = new Auth();
 
@@ -13,8 +14,9 @@ const  App  = () =>  {
       <>
         <Nav />
           <main>
-          <Route path='/' exact render={props => <Home auth={auth} {...props}/>}></Route>
+            <Route path='/' exact render={props => <Home auth={auth} {...props}/>}></Route>
             <Route path='/profile' exact component={Profile}></Route>
+            <Route path='/callback' exact render={props => <CallBack auth={auth} {...props}/>}></Route>
           </main>
         </>
     );

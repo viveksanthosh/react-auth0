@@ -11,9 +11,19 @@ class Auth {
     });
   }
 
-    login = () => {
-        this.auth.authorize();
+  login = () => {
+    this.auth.authorize();
   };
-};
+
+  verify = () =>
+    new Promise((res, rej) => {
+      this.auth.parseHash((err, result) => {
+        if (err) {
+          rej(err);
+        }
+        console.log(result)
+      });
+    });
+}
 
 export default Auth;
