@@ -17,7 +17,7 @@ const CallBack = ({ auth }) => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
       {error ? (
         <h1> Error while logging in {error.error}</h1>
       ) : (
@@ -28,7 +28,7 @@ const CallBack = ({ auth }) => {
             .join("")}
         </h1>
       )}
-    </>
+   </React.Fragment>
   );
 };
 
