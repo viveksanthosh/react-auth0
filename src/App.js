@@ -6,6 +6,8 @@ import { Nav } from './Nav';
 import Auth from './Auth';
 import { CallBack } from './CallBack';
 
+import './App.css'
+
 const auth = new Auth();
 
 const  App  = () =>  {
